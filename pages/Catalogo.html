@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - El Rincón del Conocimiento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="../js/buscador.js"></script>
+    <script src="../js/carrito.js"></script>
+</head>
+<body>
+    <header>
+        <h1>El Rincón del Conocimiento</h1>
+        <button id="verCarrito">Ver Carrito</button>
+        <div id="carritoDeCompras"></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li class="submenu-hover">
+                    <a href="#">Catálogo</a>
+                    <ul class="submenu">
+                        <li><a href="Catalogo.html">Filosofía Política</a></li>
+                        <li><a href="Catalogo.html">Relaciones Internacionales</a></li>
+                        <li><a href="Catalogo.html">Historia Política</a></li>
+                        <li><a href="Catalogo.html">Política Comparada</a></li>
+                    </ul>
+                </li>
+                <li><a href="Sobre Nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="buscador">
+            <input type="text" id="inputBuscador" placeholder="Buscar en el catálogo...">
+            <button onclick="buscarLibros()">Buscar</button>
+        </div>
+        <section id="catalogo">
+            <h2>Nuestro Catálogo</h2>
+            <div class="contenedor-libros">
+                <section id="filosofia-politica">
+                    <h3>Filosofía Política</h3>
+                    <article class="libro">
+                        <img src="../img/Lenin.jpg" alt="El Estado y la Revolución" width="300px" height="450px">
+                        <h4>El Estado y la Revolución</h4>
+                        <p>Vladimir Lenin</p>
+                        <p>Una exploración de las ideas de Marx sobre el Estado y el papel que debería jugar en la revolución proletaria.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="1" data-precio="10.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="1" data-precio="10.99€">Eliminar del Carrito</button>
+                    </article>
+                    <article class="libro">
+                        <img src="../img/Platon.jpg" alt="La República" width="300px" height="450px">
+                        <h4>La República</h4>
+                        <p>Platón</p>
+                        <p>Un diálogo socrático que aborda la justicia y el orden político ideal.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="2" data-precio="12.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="2" data-precio="12.99€">Eliminar del Carrito</button>
+                    </article>
+                    <article class="libro">
+                        <img src="../img/maquiavelo.webp" alt="El Príncipe" width="300px" height="450px">
+                        <h4>El Príncipe</h4>
+                        <p>Niccolo Maquiavelo</p>
+                        <p>Obra magna de uno de los padres de la Ciencia Política.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="3" data-precio="14.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="3" data-precio="14.99€">Eliminar del Carrito</button>
+                    </article>
+                </section>
+                <section id="relaciones-internacionales">
+                    <h3>Relaciones Internacionales</h3>
+                    <article class="libro">
+                        <img src="../img/burchill.jpg" alt="Teorías de Relaciones Internacionales" width="300px" height="450px">
+                        <h4>Teorías de Relaciones Internacionales</h4>
+                        <p>Scott Burchill y Andrew Linklater</p>
+                        <p>Una guía completa de las teorías que han modelado el estudio de las relaciones internacionales.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="4" data-precio="15.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="4" data-precio="15.99€">Eliminar del Carrito</button>
+                    </article>
+                    <article class="libro">
+                        <img src="../img/huntington.jpg" alt="El Choque de Civilizaciones" width="300px" height="450px">
+                        <h4>El Choque de Civilizaciones</h4>
+                        <p>Samuel P. Huntington</p>
+                        <p>Un análisis sobre los conflictos post-Guerra Fría y la división cultural global.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="5" data-precio="16.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="5" data-precio="16.99€">Eliminar del Carrito</button>
+                    </article>
+                    <article class="libro">
+                        <img src="../img/kissinger.jpg" alt="Diplomacia" width="300px" height="450px">
+                        <h4>Diplomacia</h4>
+                        <p>Henry Kissinger</p>
+                        <p>Un examen de la política exterior estadounidense y la práctica de la diplomacia.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="6" data-precio="11.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="6" data-precio="11.99€">Eliminar del Carrito</button>
+                    </article>
+                </section>
+                <section id="historia-politica">
+                    <h3>Historia Política</h3>
+                    <article class="libro">
+                        <img src="../img/trotsky.jpg" alt="Historia de la Revolución Rusa" width="300px" height="450px">
+                        <h4>Historia de la Revolución Rusa</h4>
+                        <p>Leon Trotsky</p>
+                        <p>Un relato detallado de la Revolución Rusa de 1917, escrito por uno de sus líderes.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="7" data-precio="18.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="7" data-precio="18.99€">Eliminar del Carrito</button>
+                    </article>
+                    <article class="libro">
+                        <img src="../img/hannah.jpg" alt="Los Orígenes del Totalitarismo" width="300px" height="450px">
+                        <h4>Los Orígenes del Totalitarismo</h4>
+                        <p>Hannah Arendt</p>
+                        <p>Análisis sobre los fundamentos y desarrollo de los regímenes totalitarios en el siglo XX.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="8" data-precio="19.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="8" data-precio="19.99€">Eliminar del Carrito</button>
+                    </article>
+                    <article class="libro">
+                        <img src="../img/miguel martorell.webp" alt="Manual de Historia Política y Social de España (1808-2018)" width="300px" height="450px">
+                        <h4>Manual de Historia Política y Social de España (1808-2018)</h4>
+                        <p>Miguel Martorell</p>
+                        <p>Exploración de la transformación global durante la expansión del capitalismo en el siglo XIX.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="9" data-precio="21.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="9" data-precio="21.99€">Eliminar del Carrito</button>
+                    </article>
+                </section>
+                <section id="politica-comparada">
+                    <h3>Política Comparada</h3>
+                    <article class="libro">
+                        <img src="../img/almond.png" alt="Política Comparada" width="300px" height="450px">
+                        <h4>Política Comparada</h4>
+                        <p>George A. Almond</p>
+                        <p>Un estudio comparativo de diferentes sistemas políticos y su funcionamiento.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="10" data-precio="16.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="10" data-precio="16.99€">Eliminar del Carrito</button>
+                    </article>
+                    <article class="libro">
+                        <img src="../img/mainwaring.jpg" alt="Democracias y Dictaduras en Latinoamérica" width="300px" height="450px">
+                        <h4>Democracias y Dictaduras en Latinoamérica</h4>
+                        <p>Scott Mainwaring</p>
+                        <p>Análisis de la transición entre regímenes democráticos y dictatoriales en América Latina.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="11" data-precio="17.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="11" data-precio="17.99€">Eliminar del Carrito</button>
+                    </article>
+                    <article class="libro">
+                        <img src="../img/touraine.jpg" alt="¿Qué es la Democracia?" width="300px" height="450px">
+                        <h4>¿Qué es la Democracia?</h4>
+                        <p>Alain Touraine</p>
+                        <p>Aborda los desafíos contemporáneos que enfrentan las democracias en el mundo.</p>
+                        <a href="#">Más información</a>
+                        <button class="agregar-al-carrito" data-id="12" data-precio="18.99€">Agregar al Carrito</button>
+                        <button class="eliminar-del-carrito" data-id="12" data-precio="18.99€">Eliminar del Carrito</button>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2024 El Rincón del Conocimiento. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+

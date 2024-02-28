@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    padding: 10px 15px;
+    display: block;
+}
+
+.submenu-hover:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #004488;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.submenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.submenu ul li {
+    border-bottom: 1px solid #007BFF;
+}
+
+.submenu ul li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.submenu ul li a:hover {
+    background-color: #0055a5;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+.transicionlibrosdestacados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transicionlibrosdestacados img {
+    width: 300px;
+    height: 450px;
+    display: none;
+    object-fit: cover;
+}
+
+.transicionlibrosdestacados img.activo {
+    display: block;
+}
+
+#introduccion, #sobre-nosotros {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#introduccion h2, #sobre-nosotros h2 {
+    text-align: center;
+    color: #003366;
+}
+
+#introduccion p, #sobre-nosotros p {
+    text-align: justify;
+    line-height: 1.6;
+    color: #666;
+}
+
+#sobre-nosotros section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#formulario-contacto {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#formulario-contacto input, #formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#formulario-contacto button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+#formulario-contacto button:hover {
+    background-color: #0055a5;
+}
+#formulario-contacto div {
+    margin-bottom: 15px;
+}
+#formulario-contacto label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.fab {
+    font-size: 24px; 
+    color: #333; 
+    margin-right: 10px; 
+  }
+  
+  .fab:hover {
+    color: #0056b3; 
+  }
+  
+#faq {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.pregunta {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.pregunta h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.respuesta {
+    display: none;
+    padding: 10px;
+    color: #666;
+}
+
+.pregunta.activa .respuesta {
+    display: block;
+}
+
+.fas {
+    transition: transform 0.3s ease;
+}
+
+.pregunta.activa .fas {
+    transform: rotate(180deg);
+}
+
+#buscador {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#buscador input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    max-width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#buscador button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0055a5;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#buscador button:hover {
+    background-color: #003366;
+}
+
+.contenedor-libros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contenedor-libros section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(50% - 40px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contenedor-libros section h3 {
+    color: #003366;
+}
+
+@media (max-width: 768px) {
+    .contenedor-libros section {
+        width: calc(100% - 40px);
+    }
+}
+
+#carritoDeCompras {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+    color: #333;
+  }
+  
+  .carrito-item {
+    border-bottom: 1px solid #080808;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .carrito-item button {
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.carrito-item button:hover {
+    background-color: darkred;
+}
+  
+
+
+
+
+
+
